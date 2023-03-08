@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
+// schema that each attraction is made with
 const attractionSchema = new Schema({
     title: {
         type: String,
@@ -36,7 +37,12 @@ const attractionSchema = new Schema({
         required: true
     },
     likes: {
-        type: Number
+        type: Number,
+        required: true
+    },
+    userName: {
+        type: String,
+        required: true
     }
 }, { timestamps: true });
 
